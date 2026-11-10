@@ -1,0 +1,61 @@
+{
+  "document": "co_026_conflicting_amounts.pdf",
+  "extractions": [
+    {
+      "category": "conflicting_amounts",
+      "project": {
+        "name": "Riverside Medical Pavilion 26",
+        "number": "RMP-2026-026",
+        "address": "126 Harbor Avenue, Columbus, OH 43215"
+      },
+      "parties": {
+        "owner": {
+          "name": "Northstar Development Group"
+        },
+        "contractor": {
+          "name": "Keystone Builders LLC"
+        },
+        "subcontractor": {
+          "name": "Atlas Electrical Services"
+        }
+      },
+      "change_order": {
+        "number": "CO-026",
+        "title": "Level 3 coordination revision",
+        "reason": "Issued for coordination and field conditions",
+        "scope": "Revise installation, furnish materials, and coordinate affected trades",
+        "type": "additive",
+        "is_proposed": false
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": "Mobilization and field coordination",
+            "amount": 1460.0
+          },
+          {
+            "description": "Materials and installation",
+            "amount": 2690.0
+          }
+        ],
+        "subtotal": 4275.0,
+        "markup_pct": 10.0,
+        "markup_amount": 415.0,
+        "total": 4565.0,
+        "original_contract_sum": 1026000.0,
+        "net_previous_changes": 6500.0,
+        "contract_sum_prior": 1032500.0,
+        "new_contract_sum": 1037065.0
+      },
+      "schedule": {
+        "days_added": 6,
+        "revised_completion_date": "2026-09-07"
+      },
+      "approval": {
+        "status": "approved",
+        "approved_by": "Morgan Lee, Project Manager",
+        "date": "2026-03-15"
+      }
+    }
+  ]
+}

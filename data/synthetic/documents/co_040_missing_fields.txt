@@ -1,0 +1,28 @@
+CHANGE ORDER
+Project: Riverside Medical Pavilion 40
+Project Number: RMP-2026-040
+Location: 
+Owner: Northstar Development Group
+Contractor: Keystone Builders LLC
+Subcontractor: 
+Change Order Number: CO-040
+Title: Level 5 coordination revision
+Reason: Issued for coordination and field conditions
+Scope: Revise installation, furnish materials, and coordinate affected trades
+Type: Additive
+
+Line Items:
+1. Mobilization and field coordination - $1,600.00
+2. Materials and installation - $2,900.00
+Subtotal: $4,500.00
+Markup (10%): $450.00
+Total This Change Order: $4,950.00
+Original Contract Sum: $1,040,000.00
+Previous Change Orders Net: $10,000.00
+Contract Sum Prior to This CO: $1,050,000.00
+New Contract Sum: $1,054,950.00
+Schedule Impact: 4 calendar days added
+Revised Completion Date: 2026-05-01
+Status: Approved
+Approved By: Morgan Lee, Project Manager
+Approval Date: 2026-03-15

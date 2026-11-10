@@ -1,0 +1,61 @@
+{
+  "document": "co_014_clean_pdf.pdf",
+  "extractions": [
+    {
+      "category": "clean_pdf",
+      "project": {
+        "name": "Riverside Medical Pavilion 14",
+        "number": "RMP-2026-014",
+        "address": "114 Harbor Avenue, Columbus, OH 43215"
+      },
+      "parties": {
+        "owner": {
+          "name": "Northstar Development Group"
+        },
+        "contractor": {
+          "name": "Keystone Builders LLC"
+        },
+        "subcontractor": {
+          "name": "Atlas Electrical Services"
+        }
+      },
+      "change_order": {
+        "number": "CO-014",
+        "title": "Level 3 coordination revision",
+        "reason": "Issued for coordination and field conditions",
+        "scope": "Revise installation, furnish materials, and coordinate affected trades",
+        "type": "additive",
+        "is_proposed": false
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": "Mobilization and field coordination",
+            "amount": 1340.0
+          },
+          {
+            "description": "Materials and installation",
+            "amount": 2510.0
+          }
+        ],
+        "subtotal": 3850.0,
+        "markup_pct": 10.0,
+        "markup_amount": 385.0,
+        "total": 4235.0,
+        "original_contract_sum": 1014000.0,
+        "net_previous_changes": 3500.0,
+        "contract_sum_prior": 1017500.0,
+        "new_contract_sum": 1021735.0
+      },
+      "schedule": {
+        "days_added": 10,
+        "revised_completion_date": "2026-06-15"
+      },
+      "approval": {
+        "status": "approved",
+        "approved_by": "Morgan Lee, Project Manager",
+        "date": "2026-03-15"
+      }
+    }
+  ]
+}

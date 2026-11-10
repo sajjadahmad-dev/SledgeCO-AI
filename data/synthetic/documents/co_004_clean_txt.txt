@@ -1,0 +1,28 @@
+CHANGE ORDER
+Project: Riverside Medical Pavilion 04
+Project Number: RMP-2026-004
+Location: 104 Harbor Avenue, Columbus, OH 43215
+Owner: Northstar Development Group
+Contractor: Keystone Builders LLC
+Subcontractor: Atlas Electrical Services
+Change Order Number: CO-004
+Title: Level 5 coordination revision
+Reason: Issued for coordination and field conditions
+Scope: Revise installation, furnish materials, and coordinate affected trades
+Type: Additive
+
+Line Items:
+1. Mobilization and field coordination - $1,240.00
+2. Materials and installation - $2,360.00
+Subtotal: $3,600.00
+Markup (10%): $360.00
+Total This Change Order: $3,960.00
+Original Contract Sum: $1,004,000.00
+Previous Change Orders Net: $1,000.00
+Contract Sum Prior to This CO: $1,005,000.00
+New Contract Sum: $1,008,960.00
+Schedule Impact: 8 calendar days added
+Revised Completion Date: 2026-05-05
+Status: Approved
+Approved By: Morgan Lee, Project Manager
+Approval Date: 2026-03-15

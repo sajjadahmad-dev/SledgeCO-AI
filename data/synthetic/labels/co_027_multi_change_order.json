@@ -1,0 +1,117 @@
+{
+  "document": "co_027_multi_change_order.pdf",
+  "extractions": [
+    {
+      "category": "multi_change_order",
+      "project": {
+        "name": "Riverside Medical Pavilion 27",
+        "number": "RMP-2026-027",
+        "address": "127 Harbor Avenue, Columbus, OH 43215"
+      },
+      "parties": {
+        "owner": {
+          "name": "Northstar Development Group"
+        },
+        "contractor": {
+          "name": "Keystone Builders LLC"
+        },
+        "subcontractor": {
+          "name": "Atlas Electrical Services"
+        }
+      },
+      "change_order": {
+        "number": "CO-027",
+        "title": "Level 4 coordination revision",
+        "reason": "Issued for coordination and field conditions",
+        "scope": "Revise installation, furnish materials, and coordinate affected trades",
+        "type": "additive",
+        "is_proposed": false
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": "Mobilization and field coordination",
+            "amount": 1470.0
+          },
+          {
+            "description": "Materials and installation",
+            "amount": 2705.0
+          }
+        ],
+        "subtotal": 4175.0,
+        "markup_pct": 10.0,
+        "markup_amount": 417.5,
+        "total": 4592.5,
+        "original_contract_sum": 1027000.0,
+        "net_previous_changes": 6750.0,
+        "contract_sum_prior": 1033750.0,
+        "new_contract_sum": 1038342.5
+      },
+      "schedule": {
+        "days_added": 7,
+        "revised_completion_date": "2026-01-08"
+      },
+      "approval": {
+        "status": "approved",
+        "approved_by": "Morgan Lee, Project Manager",
+        "date": "2026-03-15"
+      }
+    },
+    {
+      "category": "clean_txt",
+      "project": {
+        "name": "Riverside Medical Pavilion 77",
+        "number": "RMP-2026-077",
+        "address": "177 Harbor Avenue, Columbus, OH 43215"
+      },
+      "parties": {
+        "owner": {
+          "name": "Northstar Development Group"
+        },
+        "contractor": {
+          "name": "Keystone Builders LLC"
+        },
+        "subcontractor": {
+          "name": "Atlas Electrical Services"
+        }
+      },
+      "change_order": {
+        "number": "CO-077",
+        "title": "Level 6 coordination revision",
+        "reason": "Issued for coordination and field conditions",
+        "scope": "Revise installation, furnish materials, and coordinate affected trades",
+        "type": "additive",
+        "is_proposed": false
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": "Mobilization and field coordination",
+            "amount": 1970.0
+          },
+          {
+            "description": "Materials and installation",
+            "amount": 3455.0
+          }
+        ],
+        "subtotal": 5425.0,
+        "markup_pct": 10.0,
+        "markup_amount": 542.5,
+        "total": 5967.5,
+        "original_contract_sum": 1077000.0,
+        "net_previous_changes": 19250.0,
+        "contract_sum_prior": 1096250.0,
+        "new_contract_sum": 1102217.5
+      },
+      "schedule": {
+        "days_added": 9,
+        "revised_completion_date": "2026-06-18"
+      },
+      "approval": {
+        "status": "approved",
+        "approved_by": "Morgan Lee, Project Manager",
+        "date": "2026-03-15"
+      }
+    }
+  ]
+}

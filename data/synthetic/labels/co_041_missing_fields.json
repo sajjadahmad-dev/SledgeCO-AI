@@ -1,0 +1,61 @@
+{
+  "document": "co_041_missing_fields.txt",
+  "extractions": [
+    {
+      "category": "missing_fields",
+      "project": {
+        "name": "Riverside Medical Pavilion 41",
+        "number": "RMP-2026-041",
+        "address": null
+      },
+      "parties": {
+        "owner": {
+          "name": "Northstar Development Group"
+        },
+        "contractor": {
+          "name": "Keystone Builders LLC"
+        },
+        "subcontractor": {
+          "name": null
+        }
+      },
+      "change_order": {
+        "number": "CO-041",
+        "title": "Level 6 coordination revision",
+        "reason": "Issued for coordination and field conditions",
+        "scope": "Revise installation, furnish materials, and coordinate affected trades",
+        "type": "additive",
+        "is_proposed": false
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": "Mobilization and field coordination",
+            "amount": 1610.0
+          },
+          {
+            "description": "Materials and installation",
+            "amount": 2915.0
+          }
+        ],
+        "subtotal": 4525.0,
+        "markup_pct": 10.0,
+        "markup_amount": 452.5,
+        "total": 4977.5,
+        "original_contract_sum": 1041000.0,
+        "net_previous_changes": 10250.0,
+        "contract_sum_prior": 1051250.0,
+        "new_contract_sum": 1056227.5
+      },
+      "schedule": {
+        "days_added": 5,
+        "revised_completion_date": "2026-06-02"
+      },
+      "approval": {
+        "status": "approved",
+        "approved_by": "Morgan Lee, Project Manager",
+        "date": "2026-03-15"
+      }
+    }
+  ]
+}

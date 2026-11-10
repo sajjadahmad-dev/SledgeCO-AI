@@ -1,0 +1,28 @@
+CHANGE ORDER
+Project: Example Office Renovation
+Project Number: EX-2026-001
+Location: 1 Main Street, Columbus, OH
+Owner: Example Owner
+Contractor: Example Builder
+Subcontractor: Example Electrical
+Change Order Number: CO-001
+Title: Additional Electrical Outlets
+Reason: Revised tenant layout
+Scope: Add outlets on the third floor
+Type: Additive
+
+Line Items:
+1. Install duplex outlets - $1,000.00
+2. Provide branch wiring - $500.00
+Subtotal: $1,500.00
+Markup (10%): $150.00
+Total This Change Order: $1,650.00
+Original Contract Sum: $500,000.00
+Previous Change Orders Net: $0.00
+Contract Sum Prior to This CO: $500,000.00
+New Contract Sum: $501,650.00
+Schedule Impact: 2 calendar days added
+Revised Completion Date: 2026-06-15
+Status: Approved
+Approved By: Example Reviewer
+Approval Date: 2026-05-01

@@ -1,0 +1,59 @@
+# ============================================================
+# SledgeCO-AI .gitignore
+# ============================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# --- Virtual Environment ---
+.venv/
+venv/
+ENV/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Environment / Secrets ---
+.env
+*.env.local
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Testing ---
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# --- Evaluation Results ---
+# Keep results in git for reproducibility, but ignore large temp files
+eval/results/*.tmp
+
+# --- Data ---
+# Synthetic data IS committed (reproducible)
+# But never commit real client documents
+data/real/
+data/uploads/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Misc ---
+*.bak
+*.orig

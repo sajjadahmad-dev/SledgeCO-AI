@@ -1,0 +1,692 @@
+{
+  "source_file": "data\\examples\\example_input.txt",
+  "extractions": [
+    {
+      "document": {
+        "filename": "example_input.txt",
+        "file_type": "txt",
+        "page_count": 1
+      },
+      "project": {
+        "name": {
+          "value": "Example Office Renovation",
+          "raw_text": "Example Office Renovation",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Project: Example Office Renovation",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "number": {
+          "value": "EX-2026-001",
+          "raw_text": "EX-2026-001",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Project Number: EX-2026-001",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "address": {
+          "value": "1 Main Street, Columbus, OH",
+          "raw_text": "1 Main Street, Columbus, OH",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Location: 1 Main Street, Columbus, OH",
+            "page": 1
+          },
+          "validation": "not_checked"
+        }
+      },
+      "parties": {
+        "owner": {
+          "name": {
+            "value": "Example Owner",
+            "raw_text": "Example Owner",
+            "confidence": 1.0,
+            "evidence": {
+              "quote": "Owner: Example Owner",
+              "page": 1
+            },
+            "validation": "not_checked"
+          }
+        },
+        "contractor": {
+          "name": {
+            "value": "Example Builder",
+            "raw_text": "Example Builder",
+            "confidence": 1.0,
+            "evidence": {
+              "quote": "Contractor: Example Builder",
+              "page": 1
+            },
+            "validation": "not_checked"
+          }
+        },
+        "subcontractor": {
+          "name": {
+            "value": "Example Electrical",
+            "raw_text": "Example Electrical",
+            "confidence": 1.0,
+            "evidence": {
+              "quote": "Subcontractor: Example Electrical",
+              "page": 1
+            },
+            "validation": "not_checked"
+          }
+        }
+      },
+      "change_order": {
+        "number": {
+          "value": "CO-001",
+          "raw_text": "CO-001",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Change Order Number: CO-001",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "title": {
+          "value": "Additional Electrical Outlets",
+          "raw_text": "Additional Electrical Outlets",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Title: Additional Electrical Outlets",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "reason": {
+          "value": "Revised tenant layout",
+          "raw_text": "Revised tenant layout",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Reason: Revised tenant layout",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "scope": {
+          "value": "Add outlets on the third floor",
+          "raw_text": "Add outlets on the third floor",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Scope: Add outlets on the third floor",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "type": {
+          "value": "additive",
+          "raw_text": "additive",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Type: Additive",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "is_proposed": {
+          "value": null,
+          "raw_text": null,
+          "confidence": 0.625,
+          "evidence": null,
+          "validation": "not_checked"
+        }
+      },
+      "financials": {
+        "line_items": [
+          {
+            "description": {
+              "value": "Install duplex outlets",
+              "raw_text": "Install duplex outlets",
+              "confidence": 1.0,
+              "evidence": {
+                "quote": "1. Install duplex outlets - $1,000.00",
+                "page": 1
+              },
+              "validation": "not_checked"
+            },
+            "amount": {
+              "value": "1000.00",
+              "raw_text": "1000.00",
+              "confidence": 1.0,
+              "evidence": {
+                "quote": "1. Install duplex outlets - $1,000.00",
+                "page": 1
+              },
+              "validation": "not_checked"
+            }
+          },
+          {
+            "description": {
+              "value": "Provide branch wiring",
+              "raw_text": "Provide branch wiring",
+              "confidence": 1.0,
+              "evidence": {
+                "quote": "2. Provide branch wiring - $500.00",
+                "page": 1
+              },
+              "validation": "not_checked"
+            },
+            "amount": {
+              "value": "500.00",
+              "raw_text": "500.00",
+              "confidence": 1.0,
+              "evidence": {
+                "quote": "2. Provide branch wiring - $500.00",
+                "page": 1
+              },
+              "validation": "not_checked"
+            }
+          }
+        ],
+        "subtotal": {
+          "value": "1500.00",
+          "raw_text": "1500.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Subtotal: $1,500.00",
+            "page": 1
+          },
+          "validation": "passed"
+        },
+        "markup_pct": {
+          "value": 10.0,
+          "raw_text": "10",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "1. Install duplex outlets - $1,000.00",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "markup_amount": {
+          "value": "150.00",
+          "raw_text": "150.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Subtotal: $1,500.00",
+            "page": 1
+          },
+          "validation": "warning"
+        },
+        "total": {
+          "value": "1650.00",
+          "raw_text": "1650.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Total This Change Order: $1,650.00",
+            "page": 1
+          },
+          "validation": "warning"
+        },
+        "original_contract_sum": {
+          "value": "500000.00",
+          "raw_text": "500000.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Original Contract Sum: $500,000.00",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "net_previous_changes": {
+          "value": "0.00",
+          "raw_text": "0.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "1. Install duplex outlets - $1,000.00",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "contract_sum_prior": {
+          "value": "500000.00",
+          "raw_text": "500000.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Original Contract Sum: $500,000.00",
+            "page": 1
+          },
+          "validation": "passed"
+        },
+        "new_contract_sum": {
+          "value": "501650.00",
+          "raw_text": "501650.00",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "New Contract Sum: $501,650.00",
+            "page": 1
+          },
+          "validation": "passed"
+        }
+      },
+      "schedule": {
+        "days_added": {
+          "value": 2,
+          "raw_text": "2",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Project Number: EX-2026-001",
+            "page": 1
+          },
+          "validation": "not_checked"
+        },
+        "revised_completion_date": {
+          "value": "2026-06-15",
+          "raw_text": "2026-06-15",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Revised Completion Date: 2026-06-15",
+            "page": 1
+          },
+          "validation": "passed",
+          "ambiguous": false
+        }
+      },
+      "approval": {
+        "status": {
+          "value": "approved",
+          "raw_text": "approved",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Status: Approved",
+            "page": 1
+          },
+          "validation": "passed"
+        },
+        "approved_by": {
+          "value": "Example Reviewer",
+          "raw_text": "Example Reviewer",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Approved By: Example Reviewer",
+            "page": 1
+          },
+          "validation": "passed"
+        },
+        "date": {
+          "value": "2026-05-01",
+          "raw_text": "2026-05-01",
+          "confidence": 1.0,
+          "evidence": {
+            "quote": "Approval Date: 2026-05-01",
+            "page": 1
+          },
+          "validation": "passed",
+          "ambiguous": false
+        }
+      },
+      "warnings": []
+    }
+  ],
+  "validation": [
+    {
+      "overall_result": "warning",
+      "passed_count": 10,
+      "failed_count": 0,
+      "warning_count": 2,
+      "rules": [
+        {
+          "rule_name": "markup_pct_times_subtotal",
+          "passed": true,
+          "message": "Markup calculation: 1500.00 \u00d7 10.0% = 150.000, document says 150.00. Diff: 0.000.",
+          "severity": "warning",
+          "field_path": "financials.markup_amount",
+          "details": {
+            "expected": "150.000",
+            "actual": "150.00",
+            "diff": "0.000"
+          }
+        },
+        {
+          "rule_name": "subtotal_plus_markup_equals_total",
+          "passed": true,
+          "message": "Total calculation: 1500.00 + 150.00 = 1650.00, document says 1650.00. Diff: 0.00.",
+          "severity": "warning",
+          "field_path": "financials.total",
+          "details": {
+            "expected": "1650.00",
+            "actual": "1650.00",
+            "diff": "0.00"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": [
+    {
+      "overall_score": 0.8784,
+      "min_field_score": 0.625,
+      "max_field_score": 1.0,
+      "mean_field_score": 0.9871,
+      "num_low_confidence_fields": 0,
+      "field_scores": [
+        {
+          "field_path": "project.name",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "project.number",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "project.address",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "parties.owner.name",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "parties.contractor.name",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "parties.subcontractor.name",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.number",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.title",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.reason",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.scope",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.type",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "change_order.is_proposed",
+          "overall_score": 0.625,
+          "signals": {
+            "evidence_match": 0.0,
+            "format_validity": 0.5,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.line_items[0].description",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.line_items[0].amount",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.line_items[1].description",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.line_items[1].amount",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.subtotal",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.markup_pct",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.markup_amount",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.total",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.original_contract_sum",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.net_previous_changes",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.contract_sum_prior",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "financials.new_contract_sum",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "schedule.days_added",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "schedule.revised_completion_date",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "approval.status",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "approval.approved_by",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        },
+        {
+          "field_path": "approval.date",
+          "overall_score": 1.0,
+          "signals": {
+            "evidence_match": 1.0,
+            "format_validity": 1.0,
+            "arithmetic_check": 1.0,
+            "scan_quality": 1.0,
+            "ambiguity_penalty": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "routing_decision": "needs_review",
+  "errors": []
+}
