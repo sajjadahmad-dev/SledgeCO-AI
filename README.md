@@ -24,9 +24,11 @@ is deterministic `mock`, so no API key or paid request is needed for local use.
 - TXT and PDF ingestion, including mixed PDFs.
 - Tesseract OCR for image-only pages with per-page OCR confidence.
 - Deterministic mock extraction for reproducible development and evaluation.
-- Optional Anthropic provider, disabled by default.
+- Optional Gemini provider, disabled by default.
 - Pydantic-validated nested JSON.
 - Per-field `value`, `raw_text`, `confidence`, `evidence`, and `validation`.
+- Label-only matches and blank signature placeholders are rejected; unsupported
+  values remain null with low confidence.
 - Financial, date, approval, sign-convention, and PCO/CO checks.
 - Explicit human-review routing; no automatic financial approval.
 
@@ -40,6 +42,24 @@ python -m app.cli extract path\to\change-order.pdf --output result.json
 The optional API is available with `pip install -e ".[api]"` and can be served
 with `uvicorn app.api:app`. The optional review app is not required for the
 core pipeline.
+
+## Streamlit review app
+
+Install the UI and OCR dependencies from PowerShell:
+
+```powershell
+python -m pip install -e ".[streamlit,ocr]"
+$env:TESSERACT_CMD = "C:\Program Files\Tesseract-OCR\tesseract.exe"
+python -m streamlit run frontend\review_app.py
+```
+
+Open [http://localhost:8501](http://localhost:8501) in your browser. Upload a
+PDF or TXT file in the sidebar and click **Process Document**. The app calls
+the existing `app.pipeline.process_document` function, then displays the
+per-field value, confidence, evidence, validation status, document validation
+findings, warnings, complete JSON, and a JSON download button. It does not
+duplicate OCR, extraction, normalization, validation, or routing logic, and it
+never approves a change order automatically.
 
 ## Supported inputs
 
@@ -60,7 +80,7 @@ executed change orders.
 ## Architecture
 
 `ingestion` detects files and extracts page text/OCR. `providers` supplies either
-the deterministic mock extractor or the opt-in Anthropic adapter. `extraction`
+the deterministic mock extractor or the opt-in Gemini adapter. `extraction`
 normalizes values and attaches evidence quotes/page numbers. `validation` runs
 financial, date, approval, and PCO/CO rules. `confidence` scores every extracted
 field. `routing` returns only `ready_for_review`, `needs_review`, or `blocked`.
@@ -74,7 +94,7 @@ There is no automatic financial approval state.
 - Input files are never modified.
 - Size and extension checks run before ingestion.
 - Provider, OCR, parsing, and validation failures are surfaced explicitly.
-- Anthropic calls occur only when `LLM_PROVIDER=anthropic` is explicitly set.
+- Gemini calls occur only when `LLM_PROVIDER=gemini` is explicitly set.
 
 ## Example output
 
@@ -112,8 +132,8 @@ human review and never becomes an automatic financial approval.
 
 ## Known limitations
 
-- The Anthropic adapter currently requests JSON text; production tool-use schema
-  enforcement and image/Vision content are not yet implemented.
+- The Gemini adapter currently requests JSON text over HTTP; image/Vision
+  content is not yet implemented.
 - OCR requires the external Tesseract executable in addition to `pytesseract`.
 - Calibration results are based on the deterministic synthetic corpus and must
   be retrained/validated with representative labeled production documents.
@@ -122,7 +142,7 @@ human review and never becomes an automatic financial approval.
 
 ## Synthetic dataset and evaluation
 
-Generate the deterministic 50-document corpus (TXT, text PDFs, scanned PDFs,
+Generate the deterministic 50-document mock-provider corpus (TXT, text PDFs, scanned PDFs,
 multi-page PDFs, multi-change-order documents, missing fields, deductive orders,
 ambiguous dates, and noisy OCR):
 
@@ -149,12 +169,13 @@ from an empty or incomplete dataset.
 Calibration uses a deterministic 60/20/20 train/validation/test split. The
 existing heuristic is compared with logistic regression on validation Brier
 score; the selected method and both ECE/Brier results are recorded. These
-metrics describe this synthetic mock-provider corpus only and are not a claim
-of production calibration.
+metrics describe this synthetic mock-provider corpus only. They are separate
+from the manual Gemini checks in [docs/approach.md](docs/approach.md) and are
+not a claim of production calibration.
 
 ## Assessment write-up
 
-See [APPROACH_AND_FAILURE_MODES.md](APPROACH_AND_FAILURE_MODES.md) for the
+See [docs/approach.md](docs/approach.md) for the
 concise architecture, methodology, failure modes, review strategy, and measured
 evaluation results.
 

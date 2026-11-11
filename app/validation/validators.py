@@ -223,12 +223,12 @@ def validate_extraction(
     # ---- Summarize Results ----
     report.results = all_results
     for result in all_results:
-        if not result.passed:
-            report.failed_count += 1
+        if result.passed:
+            report.passed_count += 1
         elif result.severity == "warning":
             report.warning_count += 1
-        else:
-            report.passed_count += 1
+        elif result.severity == "error":
+            report.failed_count += 1
 
     if report.failed_count > 0:
         report.overall_result = ValidationResult.FAILED

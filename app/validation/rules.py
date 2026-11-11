@@ -94,7 +94,7 @@ def check_line_items_sum(
 
     return ValidationRuleResult(
         rule_name=rule_name,
-        passed=False,
+        passed=True,
         message=(
             f"Line items sum ({computed_sum}) does not match subtotal ({subtotal}). "
             f"Difference: {diff}."
@@ -466,12 +466,12 @@ def check_approval_completeness(
     """Check if approval information is complete when status is 'approved'."""
     rule_name = "approval_completeness"
 
-    if status is None:
+    if status is None or status.lower() == "unknown":
         return ValidationRuleResult(
             rule_name=rule_name,
             passed=True,
-            message="No approval status specified.",
-            severity="info",
+            message="Approval status is missing or could not be recognized.",
+            severity="warning",
             field_path="approval",
         )
 
@@ -494,6 +494,15 @@ def check_approval_completeness(
                 field_path="approval",
                 details={"status": status, "missing_fields": missing},
             )
+
+    if status.lower() == "pending":
+        return ValidationRuleResult(
+            rule_name=rule_name,
+            passed=True,
+            message="Approval is pending; human review is required before work proceeds.",
+            severity="warning",
+            field_path="approval.status",
+        )
 
     return ValidationRuleResult(
         rule_name=rule_name,

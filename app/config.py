@@ -30,13 +30,14 @@ class Settings(BaseSettings):
 
     # --- LLM Provider ---
     anthropic_api_key: str = Field(default="", description="Anthropic API key")
+    gemini_api_key: str = Field(default="", description="Gemini API key")
     model_name: str = Field(
         default="claude-sonnet-4-20250514",
         description="Claude model ID for extraction",
     )
-    llm_provider: Literal["anthropic", "mock"] = Field(
+    llm_provider: Literal["gemini", "mock"] = Field(
         default="mock",
-        description="LLM provider to use: 'anthropic' for production, 'mock' for testing",
+        description="LLM provider to use: 'gemini' for production, 'mock' for testing",
     )
 
     # --- Pipeline ---

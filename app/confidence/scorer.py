@@ -22,6 +22,8 @@ import logging
 from dataclasses import dataclass, field
 from typing import Any
 
+from app.extraction.normalizer import normalize_amount
+
 logger = logging.getLogger(__name__)
 
 __all__ = ["ConfidenceScorer", "FieldConfidence", "DocumentConfidence"]
@@ -132,13 +134,15 @@ class ConfidenceScorer:
         fc = FieldConfidence(field_path=field_path)
 
         # Signal 1: Evidence match
-        fc.evidence_match = self._compute_evidence_match(evidence_quote, source_text)
+        fc.evidence_match = self._compute_evidence_match(evidence_quote, source_text, value)
 
         # Signal 2: Format validity
         fc.format_validity = self._compute_format_validity(value, expected_format)
 
         # Signal 3: Arithmetic check
-        if validation_passed is not None:
+        if value is None:
+            fc.arithmetic_check = 0.0
+        elif validation_passed is not None:
             fc.arithmetic_check = 1.0 if validation_passed else 0.0
         else:
             fc.arithmetic_check = 0.5  # Unknown → neutral
@@ -151,13 +155,17 @@ class ConfidenceScorer:
 
         # Compute weighted score
         fc.overall_score = self._weighted_score(fc)
+        if value is None:
+            fc.overall_score = min(fc.overall_score, 0.25)
+        elif fc.evidence_match == 0.0:
+            fc.overall_score = min(fc.overall_score, 0.4)
 
         return fc
 
     def score_document(
         self,
         field_scores: list[FieldConfidence],
-        low_confidence_threshold: float = 0.5,
+        low_confidence_threshold: float = 0.7,
     ) -> DocumentConfidence:
         """
         Aggregate field-level scores into a document-level confidence.
@@ -199,24 +207,48 @@ class ConfidenceScorer:
 
         return dc
 
-    def _compute_evidence_match(self, evidence_quote: str | None, source_text: str | None) -> float:
+    def _compute_evidence_match(
+        self, evidence_quote: str | None, source_text: str | None, value: Any = None
+    ) -> float:
         """
         Compute fuzzy match score between evidence quote and source text.
         Uses rapidfuzz for efficient fuzzy string matching.
         """
-        if not evidence_quote or not source_text:
+        if value is None or not evidence_quote or not source_text:
             return 0.0
 
+        value_text = str(value).strip()
+        if not value_text:
+            return 0.0
+        quote_folded = evidence_quote.casefold().strip()
+        value_folded = value_text.casefold()
+        numeric_value = normalize_amount(value_text)
+        numeric_matches = False
+        if numeric_value is not None:
+            numeric_matches = any(
+                candidate in evidence_quote
+                for candidate in {format(numeric_value, "f"), f"{numeric_value:,.2f}"}
+            )
+        if not numeric_matches and value_folded in quote_folded and quote_folded != value_folded:
+            prefix = quote_folded.rsplit(value_folded, 1)[0].rstrip()
+            if prefix and prefix[-1].isalnum():
+                return 0.0
         try:
             from rapidfuzz import fuzz
 
-            # Use partial_ratio for substring matching — the quote
-            # should be found somewhere in the source text
+            # The quote must contain the extracted value; matching a label alone
+            # is not evidence for the value.
+            if not numeric_matches:
+                score = fuzz.partial_ratio(value_text.lower(), evidence_quote.lower())
+            else:
+                score = 100
+            if score < 90:
+                return 0.0
             score = fuzz.partial_ratio(evidence_quote.lower(), source_text.lower())
             return score / 100.0  # Normalize to 0-1
         except ImportError:
             # Fallback: simple substring check
-            if evidence_quote.lower() in source_text.lower():
+            if value_text.lower() in evidence_quote.lower() and evidence_quote.lower() in source_text.lower():
                 return 1.0
             return 0.0
 

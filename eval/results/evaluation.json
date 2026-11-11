@@ -3,23 +3,23 @@
   "processed_count": 50,
   "processing_error_count": 0,
   "processing_errors": [],
-  "field_level_accuracy": 0.9836363636363636,
-  "numeric_accuracy": 0.9866666666666667,
+  "field_level_accuracy": 0.9563636363636364,
+  "numeric_accuracy": 0.9533333333333334,
   "missing_field_handling": 1.0,
   "missing_field_count": 4,
   "validation_results": {
     "passed": 2,
-    "warning": 40,
-    "failed": 10
+    "warning": 45,
+    "failed": 5
   },
   "latency_ms": {
-    "mean": 395.5907899327576,
-    "min": 5.754699930548668,
-    "max": 4989.2662996426225
+    "mean": 366.0869101062417,
+    "min": 6.9815004244446754,
+    "max": 4520.25939989835
   },
   "confidence_calibration": {
-    "ece": 0.09186363636363637,
-    "brier_score": 0.03747704545454545,
+    "ece": 0.07418181818181818,
+    "brier_score": 0.04247454545454545,
     "sample_count": 110,
     "split_sizes": {
       "train": 330,
@@ -28,324 +28,338 @@
     },
     "reliability_bins": [
       {
+        "lower": 0.2,
+        "upper": 0.4,
+        "mean_confidence": 0.25,
+        "empirical_accuracy": 1.0,
+        "count": 3
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "mean_confidence": 0.4,
+        "empirical_accuracy": 0.0,
+        "count": 1
+      },
+      {
         "lower": 0.6,
         "upper": 0.8,
-        "mean_confidence": 0.73828125,
+        "mean_confidence": 0.75,
         "empirical_accuracy": 1.0,
-        "count": 32
+        "count": 15
       },
       {
         "lower": 0.8,
         "upper": 1.0,
-        "mean_confidence": 0.9700000000000001,
-        "empirical_accuracy": 0.7777777777777778,
-        "count": 9
+        "mean_confidence": 0.97,
+        "empirical_accuracy": 0.75,
+        "count": 8
       }
     ],
     "calibrated_method": "logistic_regression",
-    "calibrated_ece": 0.00037897943735698547,
-    "calibrated_brier_score": 0.017884222578323547,
-    "logistic_ece": 0.00037897943735698547,
-    "logistic_brier_score": 0.017884222578323547
+    "calibrated_ece": 0.033621903312306224,
+    "calibrated_brier_score": 0.029137526652863763,
+    "logistic_ece": 0.033621903312306224,
+    "logistic_brier_score": 0.029137526652863763
   },
   "results": [
     {
       "document": "co_001_clean_txt.txt",
-      "latency_ms": 68.32659989595413,
+      "latency_ms": 84.48279928416014,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_002_clean_txt.txt",
-      "latency_ms": 6.753100082278252,
+      "latency_ms": 7.827300578355789,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_003_clean_txt.txt",
-      "latency_ms": 8.174000307917595,
+      "latency_ms": 8.647400885820389,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_004_clean_txt.txt",
-      "latency_ms": 6.628499366343021,
+      "latency_ms": 7.814200595021248,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_005_clean_txt.txt",
-      "latency_ms": 7.858099415898323,
+      "latency_ms": 8.691900409758091,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_006_clean_txt.txt",
-      "latency_ms": 6.556699983775616,
+      "latency_ms": 7.966199889779091,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_007_clean_txt.txt",
-      "latency_ms": 7.82419927418232,
+      "latency_ms": 7.633499801158905,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_008_clean_txt.txt",
-      "latency_ms": 6.446700543165207,
+      "latency_ms": 7.677000015974045,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_009_clean_txt.txt",
-      "latency_ms": 8.343299850821495,
+      "latency_ms": 8.324000053107738,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_010_clean_txt.txt",
-      "latency_ms": 6.4980993047356606,
+      "latency_ms": 7.987299934029579,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_011_clean_pdf.pdf",
-      "latency_ms": 16.787399537861347,
+      "latency_ms": 18.48629955202341,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_012_clean_pdf.pdf",
-      "latency_ms": 10.12209989130497,
+      "latency_ms": 9.692400693893433,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_013_clean_pdf.pdf",
-      "latency_ms": 9.671700187027454,
+      "latency_ms": 10.715200565755367,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_014_clean_pdf.pdf",
-      "latency_ms": 9.19950008392334,
+      "latency_ms": 10.466800071299076,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_015_clean_pdf.pdf",
-      "latency_ms": 9.956900030374527,
+      "latency_ms": 9.988799691200256,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_016_clean_pdf.pdf",
-      "latency_ms": 8.479200303554535,
+      "latency_ms": 9.962900541722775,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_017_clean_pdf.pdf",
-      "latency_ms": 10.36440022289753,
+      "latency_ms": 9.872899390757084,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_018_clean_pdf.pdf",
-      "latency_ms": 10.539299808442593,
+      "latency_ms": 9.852400049567223,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_019_clean_pdf.pdf",
-      "latency_ms": 8.620300330221653,
+      "latency_ms": 11.098800227046013,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_020_clean_pdf.pdf",
-      "latency_ms": 10.115999728441238,
+      "latency_ms": 10.9370993450284,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_021_table_pdf.pdf",
-      "latency_ms": 8.368799462914467,
+      "latency_ms": 9.361600503325462,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_022_table_pdf.pdf",
-      "latency_ms": 9.107599966228008,
+      "latency_ms": 9.767100214958191,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_023_table_pdf.pdf",
-      "latency_ms": 10.761599987745285,
+      "latency_ms": 9.298999793827534,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_024_table_pdf.pdf",
-      "latency_ms": 8.347300812602043,
+      "latency_ms": 10.21610014140606,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_025_conflicting_amounts.pdf",
-      "latency_ms": 9.54820029437542,
+      "latency_ms": 10.582600720226765,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_026_conflicting_amounts.pdf",
-      "latency_ms": 9.175499901175499,
+      "latency_ms": 10.907999239861965,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_027_multi_change_order.pdf",
-      "latency_ms": 19.471099600195885,
+      "latency_ms": 18.848800100386143,
       "expected_extractions": 2,
       "actual_extractions": 2
     },
     {
       "document": "co_028_multi_change_order.pdf",
-      "latency_ms": 17.809400334954262,
+      "latency_ms": 19.38800048083067,
       "expected_extractions": 2,
       "actual_extractions": 2
     },
     {
       "document": "co_029_multi_page.pdf",
-      "latency_ms": 10.728400200605392,
+      "latency_ms": 11.456700041890144,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_030_multi_page.pdf",
-      "latency_ms": 10.203300043940544,
+      "latency_ms": 12.509900145232677,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_031_multi_page.pdf",
-      "latency_ms": 16.249299980700016,
+      "latency_ms": 10.925600305199623,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_032_multi_page.pdf",
-      "latency_ms": 12.190899811685085,
+      "latency_ms": 11.540500447154045,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_033_multi_page.pdf",
-      "latency_ms": 12.768999673426151,
+      "latency_ms": 13.200799934566021,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_034_scanned_pdf.pdf",
-      "latency_ms": 4989.2662996426225,
+      "latency_ms": 4520.25939989835,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_035_scanned_pdf.pdf",
-      "latency_ms": 3989.67029992491,
+      "latency_ms": 3320.481700822711,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_036_scanned_pdf.pdf",
-      "latency_ms": 3554.6578001230955,
+      "latency_ms": 3315.2401000261307,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_037_scanned_pdf.pdf",
-      "latency_ms": 3329.413899220526,
+      "latency_ms": 3259.7257997840643,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_038_scanned_pdf.pdf",
-      "latency_ms": 3445.833499543369,
+      "latency_ms": 3367.335899733007,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_039_missing_fields.txt",
-      "latency_ms": 7.048700004816055,
+      "latency_ms": 10.539899580180645,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_040_missing_fields.txt",
-      "latency_ms": 5.754699930548668,
+      "latency_ms": 7.979299873113632,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_041_missing_fields.txt",
-      "latency_ms": 6.851400248706341,
+      "latency_ms": 7.986600510776043,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_042_missing_fields.txt",
-      "latency_ms": 5.767299793660641,
+      "latency_ms": 7.830500602722168,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_043_deductive.txt",
-      "latency_ms": 7.631000131368637,
+      "latency_ms": 7.997000589966774,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_044_deductive.txt",
-      "latency_ms": 6.268899887800217,
+      "latency_ms": 7.5252000242471695,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_045_deductive.txt",
-      "latency_ms": 7.172400131821632,
+      "latency_ms": 8.035699836909771,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_046_ambiguous_date.txt",
-      "latency_ms": 6.869100034236908,
+      "latency_ms": 7.31740053743124,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_047_ambiguous_date.txt",
-      "latency_ms": 6.130600348114967,
+      "latency_ms": 7.95309990644455,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_048_noisy_ocr.txt",
-      "latency_ms": 6.317500025033951,
+      "latency_ms": 6.9815004244446754,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_049_noisy_ocr.txt",
-      "latency_ms": 5.905900150537491,
+      "latency_ms": 7.288999855518341,
       "expected_extractions": 1,
       "actual_extractions": 1
     },
     {
       "document": "co_050_proposed.txt",
-      "latency_ms": 6.983699277043343,
+      "latency_ms": 7.737499661743641,
       "expected_extractions": 1,
       "actual_extractions": 1
     }
